@@ -1,0 +1,106 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #000000,#474746 , #ffffff);
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+.nav-links {
+    text-align: center;
+    position: center;
+    left:2vw;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+h1 {
+    margin-left: 40vw;
+    text-align: center;
+    padding: 2rem;
+    color: #ffffff;
+}
+
+/* Container for the Gallery */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for 16 items */
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* Individual Cell Styling */
+.portfolio-item {
+    background: #fff;
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.74); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Fixed height to ensure uniformity */
+    cursor: pointer; /* Cursor changes to pointer when hovering */
+}
+
+/* Hover Effect */
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.portfolio-item img {
+    width: 100%; /* Make the image fill its container */
+    height: 100%; /* Ensure image maintains aspect ratio */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .portfolio-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .portfolio-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-container {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem 0;
+    background: #444;
+    color: #fff;
+  }
+.goback{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    background: #444;
+}
+
+.goback:hover {
+    background: #00aaff;
+    color: #fff;
+    border: 2px solid #00aaff;
+}
